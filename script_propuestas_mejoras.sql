@@ -1,4 +1,6 @@
--- restriccion de maximo 5 pedidos pendientes por cliente
+-- Propuestas de mejoras 
+
+-- Trigger para tener restriccion de maximo 5 pedidos pendientes por cliente
 
 DELIMITER $$
 
@@ -21,7 +23,7 @@ END$$
 DELIMITER ;
 
 
--- restriccion para solo resenas de clientes que compraron el producto
+-- Trigger para tener restriccion para solo resenas de clientes que compraron el producto
 
 DELIMITER $$
 
@@ -47,3 +49,24 @@ END$$
 DELIMITER ;
 
 
+-- Indice para buscar pedido por fecha
+CREATE INDEX idx_fecha_pedido ON pedidos(fecha_pedido);
+
+-- Indice para buscar pedido por estado 
+CREATE INDEX idx_estado_pedido ON pedidos(id_estado);
+
+-- Indice para obtener los detalles del pedido por id del pedido
+CREATE INDEX idx_id_pedido_detalle ON detalles_pedido(id_pedido);
+
+-- Indice para buscar informacion del cliente por correo
+CREATE INDEX idx_correo_cliente ON clientes(correo);
+
+
+-- ejemplo de vista para productos que valgan menos de 5000 pesos
+
+CREATE VIEW VistaProductos AS
+SELECT id_producto, nombre , precio
+FROM productos
+WHERE precio < 5000.00;
+
+SELECT * FROM VistaProductos;

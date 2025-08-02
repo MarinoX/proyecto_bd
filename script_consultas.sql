@@ -51,7 +51,7 @@ LIMIT 5;
 
 -- la consulta muestra el nombre del producto y la calificacion promedio de las resenas,
 -- se hace un inner join entre resenas y productos para obtener el nombre del producto segun el id,
---luego se agrupan los resultados por id del producto y nombre del producto , se ordena de mayor a menor calificacion
+-- luego se agrupan los resultados por id del producto y nombre del producto , se ordena de mayor a menor calificacion
 -- promedio y se limita a 5 resultados para mostrar los 5 mejores productos
 
 
