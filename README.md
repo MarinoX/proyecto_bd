@@ -1,7 +1,9 @@
 # PROYECTO - BASE DE DATOS DE DISPOSITIVOS ELECTRONICOS
 
-UEA: Base de Datos.
-Alumno : Jose Abraham Marin Sanchez.
+UEA: Base de Datos
+
+Alumno : Jose Abraham Marin Sanchez
+
 Matricula : 2233030514
 
 ------------------------------------------------------
